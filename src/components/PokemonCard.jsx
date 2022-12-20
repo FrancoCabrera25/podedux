@@ -2,7 +2,7 @@ import { StartButton } from './StartButton';
 import { Card } from 'antd';
 import Meta from 'antd/es/card/Meta';
 import { useDispatch } from 'react-redux';
-import { setFavorite } from '../actions';
+import { setFavorite } from '../slices/pokemonSlice';
 export const PokemonCard = ({ name, image, types = [], id, favorite }) => {
     const dispatch = useDispatch();
     const typesString = types.map((item) => item.type.name).join(', ');
